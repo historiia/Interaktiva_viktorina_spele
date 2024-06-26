@@ -1,0 +1,145 @@
+body {
+    color: #8E0E0C;
+}
+/*Answer display*/
+
+.atbildes-container {
+    display: flex ;
+    margin-bottom: 0.8rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    border: solid;
+    border-color: #8E0E0C;
+    border-radius: 4px;
+    border-width: 2px;
+    color:#1e1c1c;
+    background-color: #f3f3f3;
+    font-size: 1.6rem;
+}
+
+.atbildes-container:hover {
+    cursor: pointer;
+    box-shadow: 0.2rem 0.2rem 1.2rem 0.2rem #8E0E0C;
+    transition: 0.2s;
+}
+
+.atbilde-prefix {
+    padding: 1rem 1.5rem;
+    color: #8E0E0C;
+}
+
+.atbilde-text {
+    padding: 1rem;
+    width: 100%;
+}
+
+.correct {
+    background: #5ebe44;
+}
+
+.incorrect {
+    background: #bd5e44; 
+}
+
+/*Heads up display*/
+.hub{
+    display: flex;
+    justify-content: space-between;
+}
+
+.hub-prefix{
+    text-align: center;
+    font-size: 2rem;
+}
+
+.hub-main-text {
+    text-align: center;
+}
+
+#progressBar {
+    width: 20rem;
+    height: 3rem;
+    border: 0.2rem solid #1e1c1c;
+    margin-top: 1rem;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+#progressBarFull {
+    height: 100%;
+    background-color: #5ebe44;
+    width: 0%;
+}
+
+#jautajums{
+    margin-left: 1rem;
+    margin-right: 1rem; 
+}
+
+.hub{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+@media screen and (max-width: 820px) {
+    #jautajums {
+        font-size: 2rem;
+    }
+    
+    .hub-prefix{
+        margin-bottom: 0.5rem;
+        font-size: 1.3rem;
+    }
+
+    #score{
+        font-size: 2rem;
+    }
+
+    #progressBar {
+        width: 15rem;
+        height: 2.2rem;
+    }
+
+    #progressText{
+        font-size: 1.3rem;
+    }
+
+    .hub{
+        margin-bottom: 1rem;
+    }
+}
+
+@media screen and (max-width: 430px) {
+    #jautajums {
+        width: 300px;
+        text-align: center;
+    }
+
+    .atbildes-container {
+        justify-content: center;
+        width: 300px;
+    }
+
+    .hub {
+        flex-direction: column;
+    }
+    
+    #iegutie_punkti {
+        justify-content: center;
+    }
+
+    #progressBar {
+        align-self: center;
+        margin: 0.8rem auto 1rem auto;
+        width: 11rem;
+        height: 1.4rem;
+    }
+
+    .hub-item {
+        justify-content: center;
+    }
+
+    .hub-prefix{
+        margin-bottom: 0rem;
+    }
+}

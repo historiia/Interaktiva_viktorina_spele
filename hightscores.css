@@ -1,0 +1,27 @@
+body{
+    color:#1c1e1e;
+}
+
+#highScoresList{
+    list-style: none;
+    margin-bottom: 4rem;
+}
+
+.high-score {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: #1c1e1e;
+}
+
+.finalScore{
+    margin: 0 2rem 0 2rem;
+    text-align: center;
+}
+
+@media screen and (max-width: 670px) {
+    #sakumlapa_poga{
+        width: 290px;
+        margin-left: 1rem;
+        margin-right: 1rem;
+    }
+}
