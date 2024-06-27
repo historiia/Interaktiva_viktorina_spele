@@ -1,8 +1,9 @@
+/*Styles for only game.html file elements*/
 body {
     color: #8E0E0C;
 }
-/*Answer display*/
 
+/*Answer display*/
 .atbildes-container {
     display: flex ;
     margin-bottom: 0.8rem;
@@ -41,12 +42,15 @@ body {
     background: #bd5e44; 
 }
 
-/*Heads up display*/
+/*Result and progress display*/
 .hub{
     display: flex;
     justify-content: space-between;
+    margin-left: 1rem;
+    margin-right: 1rem;
 }
 
+/*Result section*/
 .hub-prefix{
     text-align: center;
     font-size: 2rem;
@@ -56,6 +60,7 @@ body {
     text-align: center;
 }
 
+/*Progress section*/
 #progressBar {
     width: 20rem;
     height: 3rem;
@@ -71,16 +76,13 @@ body {
     width: 0%;
 }
 
+/*Question and answer section*/
 #jautajums{
     margin-left: 1rem;
     margin-right: 1rem; 
 }
 
-.hub{
-    margin-left: 1rem;
-    margin-right: 1rem;
-}
-
+/*Section for change in screen size*/
 @media screen and (max-width: 820px) {
     #jautajums {
         font-size: 2rem;

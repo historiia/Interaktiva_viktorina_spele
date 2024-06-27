@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400..700;1,400..700&display=swap');
-
+/*Styles for index.html, highscore.html, game.html and end.html files*/
 *{
     margin: 0;
     padding: 0;
@@ -80,7 +80,8 @@ h2{
     box-shadow: none;
     transform: none;
 }
-/* End Page CSS*/
+
+/* End Page CSS section*/
 
 .end-form-container{
     display: flex;

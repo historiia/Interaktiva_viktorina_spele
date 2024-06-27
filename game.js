@@ -97,7 +97,7 @@ let questions = [
 const SCORE_POINTS = 1
 const MAX_QUESTIONS = 10
 
-startGame = () => {
+startGame = () => { // Viktorīnas sākumā iestatatītās vērtības
     questionCounter = 0
     score = 0
     avaiableQuestions = [...questions]
@@ -105,20 +105,24 @@ startGame = () => {
 }
 
 getNewQuestion = () => {
+    //Pāriešana no game.html uz end.html
     if(avaiableQuestions.length == 0 || questionCounter > MAX_QUESTIONS) {
         localStorage.setItem('mostRecentScore', score)
 
         return window.location.assign('/end.html')
     }
 
+    // Progresa un rezultātu izmaiņas
     questionCounter++;
     progressText.innerText = `${questionCounter}. jautājums no ${MAX_QUESTIONS}`
     progressBarFull.style.width = `${(questionCounter/MAX_QUESTIONS) * 100}%`
 
+    // Jautājumu izvadīšana jauktā secībā
     const questionIndex = Math.floor(Math.random()* avaiableQuestions.length)
     currentQuestion = avaiableQuestions[questionIndex]
     question.innerText = currentQuestion.question
 
+    // Lietotāja atbildes piefiksēšana
     choices.forEach(choice =>{
         const number = choice.dataset['number']
         choice.innerText = currentQuestion['choice' + number]
@@ -137,8 +141,10 @@ choices.forEach(choice => {
         const selectedChoice = e.target
         const selectAnswer = selectedChoice.dataset['number']
 
-        let classToApply = selectAnswer == currentQuestion.answer ? 'correct' : 'incorrect' // Izvēlas atbildes iekrāsošanas krāsu.
+        // Izvēlas atbildes iekrāsošanas krāsu.
+        let classToApply = selectAnswer == currentQuestion.answer ? 'correct' : 'incorrect' 
 
+        // Rezultāta ieskaitīšana
         if(classToApply == 'correct') {
             incrementScore(SCORE_POINTS)
         }
@@ -152,7 +158,7 @@ choices.forEach(choice => {
     })
 })
 
-incrementScore = num => {
+incrementScore = num => { //Rezultāta palielināšana
     score+=num
     scoreText.innerText = score
 }
